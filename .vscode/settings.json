@@ -1,0 +1,14 @@
+{
+    "chat.instructionsFilesLocations": {
+        "src": true,
+        ".vscode": true
+    },
+    "editor.wordWrap": "bounded",
+    "[instructions]": {
+        "editor.quickSuggestions": {
+			"comments": "off",
+            "strings": "off",
+            "other": "off"
+		}
+    }
+}
