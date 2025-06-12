@@ -25,6 +25,7 @@ This document describes the coding standards, patterns, and best practices. Use 
   - `target: es2022`, `module: nodenext`, `lib: ["es2022"]`
   - Set `rootDir` to `out` and `outDir` to `out`.
 - Exclude `node_modules` from compilation.
+- IMPORTANT: Use `out` for `rootDir` and `outDir`. DO NOT ADD ANYTHING INTO `src` folder!
 
 ## 3. Code Style & Conventions
 - **Header**: Add a copyright/license header to every source file.
