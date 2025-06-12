@@ -47,7 +47,7 @@ The resulting JSON contains a `url` property that should be used to download the
 Depending on the user's OS and architecture, the CLI should use the appropriate command to run the downloaded build. For example, on macOS with ARM architecture, the command might look like this:
 
 ```
-/path/to/downloaded/vscode/Contents/Resources/app/bin/code --user-data-dir=$tempdir/vscode-sanity/.data/data --extensions-dir=$tempdir/vscode-sanity/.data/extensions --disable-updates --disable-telemetry
+/path/to/downloaded/vscode/Contents/MacOS/Electron --user-data-dir=$tempdir/vscode-sanity/.data/data --extensions-dir=$tempdir/vscode-sanity/.data/extensions --disable-updates --disable-telemetry
 ```
 
 On Windows, the command might look like this:
