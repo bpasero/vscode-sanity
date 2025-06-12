@@ -1,5 +1,5 @@
 ---
-applyTo: 'src/**'
+applyTo: 'out/**'
 ---
 
 # Goals
