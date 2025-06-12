@@ -10,5 +10,10 @@
             "strings": "off",
             "other": "off"
 		}
+    },
+    "files.readonlyInclude": {
+        "out": true,
+        "bin": true,
+        "*.*": true
     }
 }

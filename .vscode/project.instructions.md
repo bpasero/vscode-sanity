@@ -23,7 +23,7 @@ This document describes the coding standards, patterns, and best practices. Use 
   - `forceConsistentCasingInFileNames: true`
   - `skipLibCheck: true`
   - `target: es2022`, `module: nodenext`, `lib: ["es2022"]`
-  - Set `rootDir` to `src` and `outDir` to `out`.
+  - Set `rootDir` to `out` and `outDir` to `out`.
 - Exclude `node_modules` from compilation.
 
 ## 3. Code Style & Conventions
@@ -38,22 +38,28 @@ This document describes the coding standards, patterns, and best practices. Use 
 - **Formatting**: Use a consistent code formatter (e.g., Prettier). Indent with 4 spaces or project standard.
 
 ## 4. Libraries & Dependencies
-- Dependencies to be taken verbatim:
-  - `chalk@^5.x` for colored CLI output
-  - `commander@^14.x` for CLI argument parsing
-  - `prompts@^2.x` for interactive CLI prompts
-  - `open@^10.x` for opening URLs
-  - `progress@^2.x` for progress bars
-  - `fflate@^0.8.x` for ZIP extraction
-  - `follow-redirects@^1.x` for HTTP(S) requests
-  - `tree-kill@^1.x` for process management
-  - `vscode-uri@^3.x` for URI handling
-- dev dependencies to be taken verbatim:
-  - `@types/follow-redirects@^1.x`
-  - `@types/node@22.x`
-  - `@types/progress@^2.0.7`
-  - `@types/prompts@^2.x`
-  - `typescript@5.x`
+- Use these dependencies exactly as specificed in the `package.json`:
+```
+"dependencies": {
+  "@vscode/vscode-perf": "^0.0.19",
+  "chalk": "^5.x",
+  "commander": "^14.x",
+  "fflate": "^0.8.2",
+  "follow-redirects": "^1.15.9",
+  "open": "^10.1.2",
+  "progress": "^2.0.3",
+  "prompts": "^2.4.2",
+  "tree-kill": "^1.2.2",
+  "vscode-uri": "^3.1.0"
+},
+"devDependencies": {
+  "@types/follow-redirects": "^1.x",
+  "@types/node": "22.x",
+  "@types/progress": "^2.0.7",
+  "@types/prompts": "^2.x",
+  "typescript": "5.x"
+}
+```
 - Use `@types/*` packages for type safety in devDependencies.
 - Use node.js 22.x.
 - Pin dependency versions for reproducibility.
@@ -61,7 +67,7 @@ This document describes the coding standards, patterns, and best practices. Use 
 ## 5. Patterns & Best Practices
 - **Singletons**: Export a single instance for shared services (e.g., `export const storage = new Storage();`).
 - **Async Initialization**: Use private `whenReady`/`init()` patterns for async setup.
-- **Separation of Concerns**: Split code into logical modules (e.g., `builds.ts`, `git.ts`, `launcher.ts`).
+- **Separation of Concerns**: Split code into logical modules (e.g., `builds.ts`, `index.ts`, `launcher.ts`).
 - **CLI Entrypoint**: Use a single entry file (e.g., `index.ts`) and export a function for CLI execution.
 - **Error Reporting**: Provide actionable error messages and troubleshooting steps.
 - **Platform Awareness**: Detect and handle platform differences (e.g., file paths, process management).
