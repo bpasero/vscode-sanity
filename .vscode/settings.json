@@ -33,11 +33,6 @@
 		},
         "editor.wordWrap": "bounded"
     },
-    "files.readonlyInclude": {
-        "out": true,
-        "bin": true,
-        "*.*": true
-    },
     "mcp": {
         "servers": {
             "context7": {
