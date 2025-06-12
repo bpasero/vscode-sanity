@@ -1,3 +1,7 @@
+---
+mode: agent
+---
+
 # Goals
 
 This is a CLI application to download and sanity test VS Code installations on Windows, Linux and macOS for x64 and ARM. 
