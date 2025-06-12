@@ -3,13 +3,19 @@
         "src": true,
         ".vscode": true
     },
-    "editor.wordWrap": "bounded",
+    "chat.modeFilesLocations": {
+        ".vscode": true
+    },
+    "chat.promptFilesLocations": {
+        ".vscode": true
+    },
     "[instructions]": {
         "editor.quickSuggestions": {
 			"comments": "off",
             "strings": "off",
             "other": "off"
-		}
+		},
+        "editor.wordWrap": "bounded"
     },
     "files.readonlyInclude": {
         "out": true,
