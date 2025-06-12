@@ -17,6 +17,22 @@
 		},
         "editor.wordWrap": "bounded"
     },
+    "[prompt]": {
+        "editor.quickSuggestions": {
+			"comments": "off",
+            "strings": "off",
+            "other": "off"
+		},
+        "editor.wordWrap": "bounded"
+    },
+    "[chatmode]": {
+        "editor.quickSuggestions": {
+			"comments": "off",
+            "strings": "off",
+            "other": "off"
+		},
+        "editor.wordWrap": "bounded"
+    },
     "files.readonlyInclude": {
         "out": true,
         "bin": true,
